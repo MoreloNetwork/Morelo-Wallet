@@ -1,4 +1,4 @@
-<ion-content [fullscreen]="true">
+<ion-content fullscreen class="ion-padding" scroll-y="false">
   <div class='center'>
     <ion-slides pager="true" [options]="slideOpts">
       <ion-slide>
@@ -13,7 +13,7 @@
         <h2>jakieś info 2</h2>
       </ion-slide>
     </ion-slides>
-    <ion-button expand="block">Let's get started!</ion-button>
+    <ion-button expand="block" href="register">Let's get started!</ion-button>
     <ion-router-link color="secondary" href="login">I already have an account</ion-router-link>
   </div>
 </ion-content>
