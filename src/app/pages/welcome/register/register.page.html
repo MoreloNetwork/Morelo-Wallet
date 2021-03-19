@@ -8,7 +8,7 @@
   <ion-slides [options]="{allowTouchMove: false}">
 
     <ion-slide>
-      <form [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
+      <form [formGroup]="registerForm" (ngSubmit)="submitForm()" novalidate>
         <ion-list lines="none" class="ion-no-margin">
           <ion-list-header lines="none">
             <ion-label>
@@ -21,6 +21,7 @@
           </ion-item>
           <ion-note color="danger" *ngIf="isSubmitted && errorControl.login.errors?.required">Login is required</ion-note>
           <ion-note color="danger" *ngIf="isSubmitted && errorControl.login.errors?.minlength">Login should be at least 4 chars long</ion-note>
+          <ion-note color="danger" *ngIf="errorControl.login.errors?.exists">Username already exists!</ion-note>
           <ion-item>
             <ion-label>Password</ion-label>
             <ion-input formControlName="password" type="password" required></ion-input>
